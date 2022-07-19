@@ -3,10 +3,11 @@ import { capitalizeFirstLetter } from '../../utils/helpers';
 
 function Nav(props) {
 
-
-  // useEffect(() => {
-  //   document.title = capitalizeFirstLetter(currentCategory.name);
-  // }, [currentCategory]);
+  const {
+    selections = [],
+    setCurrentSelection,
+    currentSelection,
+  } = props;
 
   return (
     <header className="flex-row px-1">
@@ -18,17 +19,17 @@ function Nav(props) {
       <nav>
         <ul className="flex-row">
           <li className="mx-2">
-            <a data-testid="about" href="#about">
+            <a data-testid="about" href="#about" onClick={() => setCurrentSelection(selections[0].name)}>
               About me
             </a>
           </li>
-          <li className= "mx-2" >
+          <li className= "mx-2" onClick={() => setCurrentSelection(selections[1].name)}>
             <span>Portfolio</span>
           </li>
-          <li className="mx-2">
+          <li className="mx-2" onClick={() => setCurrentSelection(selections[2].name)}>
             <span>Contact</span>
           </li>
-          <li className="mx-2">
+          <li className="mx-2" onClick={() => setCurrentSelection(selections[3].name)}>
             <span>Resume</span>
           </li>
         </ul>

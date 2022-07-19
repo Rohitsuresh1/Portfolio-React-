@@ -3,9 +3,10 @@ import Nav from './components/Nav';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import ContactForm from './components/Contact';
+import Resume from './components/Resume';
 
 function App() {
-  const [sections] = useState([
+  const [selections] = useState([
 		{
 			name: "About Me",
 		},
@@ -20,16 +21,20 @@ function App() {
 		},
 	]);
 
+  const [currentSelection, setCurrentSelection] = useState(selections[0].name);
   
   return (
     <div>
-      <Nav></Nav>
+      <Nav
+      selections={selections}
+      setCurrentSelection={setCurrentSelection}
+      currentSelection={currentSelection}
+      ></Nav>
       <main>
-        
-            <About></About>
-            <Portfolio></Portfolio>
-            <ContactForm></ContactForm>
-     
+           { currentSelection==="About Me" && <About></About> }
+           { currentSelection==="Portfolio" && <Portfolio></Portfolio> }
+           { currentSelection==="Contact" && <ContactForm></ContactForm> }
+           { currentSelection==="Resume" && <Resume></Resume> }    
       </main>
     </div>
   );
