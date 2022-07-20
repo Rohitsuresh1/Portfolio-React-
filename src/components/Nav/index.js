@@ -11,31 +11,29 @@ function Nav(props) {
   } = props;
 
   return (
-    <header className="flex-row px-1">
-      <h2>
-        <a data-testid="link" href="/">
-          <FaLaptopCode size={36}/>{'   '}Rohith Suresh 
-        </a>
-      </h2>
-      <nav>
-        <ul className="flex-row">
-          <li className="mx-2">
-            <a data-testid="about" href="#about" onClick={() => setCurrentSelection(selections[0].name)}>
-              About me
+    <nav className="flex-row">
+          <h2 className='headers nameEl'>
+            <a href="/" style={{ textDecoration: 'none', color:'white', display:'inline'}}>
+              <FaLaptopCode size={36} color={'white'}/>{'   '}Rohith Suresh 
             </a>
-          </li>
-          <li className= "mx-2" onClick={() => setCurrentSelection(selections[1].name)}>
-            <span>Portfolio</span>
-          </li>
-          <li className="mx-2" onClick={() => setCurrentSelection(selections[2].name)}>
-            <span>Contact</span>
-          </li>
-          <li className="mx-2" onClick={() => setCurrentSelection(selections[3].name)}>
-            <span>Resume</span>
-          </li>
-        </ul>
-      </nav>
-    </header>
+          </h2>
+          <section className='headers navHeaders'>
+            <ul className='navUl' style={{display:'inline-flex'}} >
+              <li className='navItem' onClick={() => setCurrentSelection(selections[0].name)}>
+                  About me
+              </li>
+              <li className='navItem' onClick={() => setCurrentSelection(selections[1].name)}>
+                <span>Portfolio</span>
+              </li>
+              <li className='navItem' onClick={() => setCurrentSelection(selections[2].name)}>
+                <span>Contact</span>
+              </li>
+              <li className='navItem' onClick={() => setCurrentSelection(selections[3].name)}>
+                <span>Resume</span>
+              </li>
+            </ul>
+          </section>
+    </nav>
   );
 }
 

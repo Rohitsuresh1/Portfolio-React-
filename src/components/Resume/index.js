@@ -5,7 +5,7 @@ const Resume = () => {
 
   return (
     <div>
-        <h1 data-testid="h1tag">Resume</h1>
+        <h1 style={{fontWeight:'bold'}} data-testid="h1tag">Resume</h1>
     </div>
   );
 };

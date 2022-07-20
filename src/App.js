@@ -33,7 +33,7 @@ function App() {
       setCurrentSelection={setCurrentSelection}
       currentSelection={currentSelection}
       ></Nav>
-      <main>
+      <main style={{height:'100%'}}>
            { currentSelection==="About Me" && <About></About> }
            { currentSelection==="Portfolio" && <Portfolio></Portfolio> }
            { currentSelection==="Contact" && <ContactForm></ContactForm> }

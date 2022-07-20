@@ -19,13 +19,13 @@ function ContactForm() {
     if (e.target.name === 'email') {
       const isValid = validateEmail(e.target.value);
       if (!isValid) {
-        setErrorMessage('Your email is invalid.');
+        setErrorMessage('Your email is invalid!');
       } else {
         setErrorMessage('');
       }
     } else {
       if (!e.target.value.length) {
-        setErrorMessage(`${e.target.name} is required.`);
+        setErrorMessage(`Your ${e.target.name} is required!`);
       } else {
         setErrorMessage('');
       }
@@ -38,19 +38,16 @@ function ContactForm() {
 
   return (
     <section>
-      <h1 data-testid="h1tag">Contact me</h1>
+      <h1 style={{marginBottom:'15px'}}>Contact me</h1>
       <form id="contact-form" onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">Name:</label>
-          <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
+          <input style={{marginBottom:'25px'}} type="text" name="name" placeholder="Name" defaultValue={name} onBlur={handleChange} />
         </div>
         <div>
-          <label htmlFor="email">Email address:</label>
-          <input type="email" name="email" defaultValue={email} onBlur={handleChange} />
+          <input style={{marginBottom:'25px'}} type="email" name="email" placeholder="Email" defaultValue={email} onBlur={handleChange} />
         </div>
         <div>
-          <label htmlFor="message">Message:</label>
-          <textarea name="message" rows="5" defaultValue={message} onBlur={handleChange} />
+          <textarea style={{marginBottom:'25px'}} name="message" rows="5" placeholder="Message" defaultValue={message} onBlur={handleChange} />
         </div>
         {errorMessage && (
           <div>
