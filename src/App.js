@@ -4,6 +4,9 @@ import About from './components/About';
 import Portfolio from './components/Portfolio';
 import ContactForm from './components/Contact';
 import Resume from './components/Resume';
+import Footer from './components/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   const [selections] = useState([
@@ -34,8 +37,10 @@ function App() {
            { currentSelection==="About Me" && <About></About> }
            { currentSelection==="Portfolio" && <Portfolio></Portfolio> }
            { currentSelection==="Contact" && <ContactForm></ContactForm> }
-           { currentSelection==="Resume" && <Resume></Resume> }    
+           { currentSelection==="Resume" && <Resume></Resume> }     
+
       </main>
+        <Footer/>
     </div>
   );
 }

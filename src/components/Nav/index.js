@@ -1,19 +1,20 @@
-import React, { useEffect } from 'react';
-import { capitalizeFirstLetter } from '../../utils/helpers';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { FaLaptopCode } from "react-icons/fa";
+
 
 function Nav(props) {
 
   const {
     selections = [],
     setCurrentSelection,
-    currentSelection,
   } = props;
 
   return (
     <header className="flex-row px-1">
       <h2>
         <a data-testid="link" href="/">
-          Rohith Suresh
+          <FaLaptopCode size={36}/>{'   '}Rohith Suresh 
         </a>
       </h2>
       <nav>
