@@ -37,8 +37,8 @@ function ContactForm() {
   };
 
   return (
-    <section>
-      <h1 style={{marginBottom:'15px', fontWeight:'bold'}}>Contact me</h1>
+    <section style={{marginLeft:'50px'}}>
+      <h1 style={{marginBottom:'35px', fontWeight:'bold'}}>Contact me</h1>
       <form id="contact-form" onSubmit={handleSubmit}>
         <div>
           <input style={{marginBottom:'25px'}} type="text" name="name" placeholder="Name" defaultValue={name} onBlur={handleChange} />

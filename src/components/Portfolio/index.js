@@ -62,12 +62,12 @@ function Portfolio() {
                   <ImgOverlay imgSrc={app.image.default} alt={app.alt} style={{height:'250px', width:'300px'}}
                     bgColor='#AED9E9'
                     position='right'
-                    width='200px'
-                    height='100px'
+                    width='300px'
+                    height='200px'
                     fSize='48px'
                     fColor='gray'
                   >
-                      <div>
+                      <div> <p>{app.name}</p>
                       <a style={{ textDecoration: 'none'}} href={app.github}> <FaGithub size={28} color={'black'}/>{'    '}</a>
                       <a style={{ textDecoration: 'none'}} href={app.deployed}> <FaLink size={28} color={'black'}/> </a>
                       </div>
