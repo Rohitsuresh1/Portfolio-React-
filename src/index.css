@@ -371,4 +371,26 @@ a {
   margin: 50px;
 }
 
+.flex-container {
+  display: flex;
+  margin-top: 25px;
+}
+
+.flex-child {
+  flex: 1;
+  box-shadow: 0 4px 8px 0 #9fd2e4, 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}  
+
+.flex-child:first-child {
+  margin-right: 50px;
+} 
+.flex-child:last-child {
+  margin-right: 50px;
+} 
+
+.flex-child,ul,li{
+  margin-bottom: 5px;
+  list-style-type: square;
+  padding-left: 5px;
+}
 

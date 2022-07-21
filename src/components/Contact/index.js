@@ -39,15 +39,16 @@ function ContactForm() {
   return (
     <section style={{marginLeft:'50px'}}>
       <h1 style={{marginBottom:'35px', fontWeight:'bold'}}>Contact me</h1>
+      <h4 style={{marginBottom:'15px'}}>Leave me a message</h4>
       <form id="contact-form" onSubmit={handleSubmit}>
         <div>
-          <input style={{marginBottom:'25px'}} type="text" name="name" placeholder="Name" defaultValue={name} onBlur={handleChange} />
+          <input style={{marginBottom:'15px'}} type="text" name="name" placeholder="Name" defaultValue={name} onBlur={handleChange} />
         </div>
         <div>
-          <input style={{marginBottom:'25px'}} type="email" name="email" placeholder="Email" defaultValue={email} onBlur={handleChange} />
+          <input style={{marginBottom:'15px'}} type="email" name="email" placeholder="Email" defaultValue={email} onBlur={handleChange} />
         </div>
         <div>
-          <textarea style={{marginBottom:'25px'}} name="message" rows="5" placeholder="Message" defaultValue={message} onBlur={handleChange} />
+          <textarea style={{marginBottom:'10px'}} name="message" rows="5" placeholder="Message" defaultValue={message} onBlur={handleChange} />
         </div>
         {errorMessage && (
           <div>
@@ -56,6 +57,11 @@ function ContactForm() {
         )}
         <button data-testid="button" type="submit">Submit</button>
       </form>
+      <div style={{marginTop:'25px'}}>
+        <h2 style={{marginBottom:'25px'}}> Or </h2>
+        <h4>Contact me at:</h4>
+        <h4>rohithsuresh06@gmail.com</h4>
+      </div>
     </section>
   );
 }
