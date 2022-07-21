@@ -8,7 +8,9 @@ function Nav(props) {
   const {
     selections = [],
     setCurrentSelection,
+    currentSelection,
   } = props;
+
 
   return (
     <nav className="flex-row">
@@ -19,16 +21,16 @@ function Nav(props) {
           </h2>
           <section className='headers navHeaders'>
             <ul className='navUl' style={{display:'inline-flex'}} >
-              <li className='navItem' onClick={() => setCurrentSelection(selections[0].name)}>
+              <li onClick={(e) => setCurrentSelection(selections[0].name)} className={`navItem ${currentSelection==="About Me" ? 'selected' : 'notselected'}`}>
                   About me
               </li>
-              <li className='navItem' onClick={() => setCurrentSelection(selections[1].name)}>
+              <li onClick={() => setCurrentSelection(selections[1].name)} className={`navItem ${currentSelection==="Portfolio" ? 'selected' : 'notselected'}`}>
                 <span>Portfolio</span>
               </li>
-              <li className='navItem' onClick={() => setCurrentSelection(selections[2].name)}>
+              <li onClick={() => setCurrentSelection(selections[2].name)} className={`navItem ${currentSelection==="Contact" ? 'selected' : 'notselected'}`}>
                 <span>Contact</span>
               </li>
-              <li className='navItem' onClick={() => setCurrentSelection(selections[3].name)}>
+              <li onClick={() => setCurrentSelection(selections[3].name)} className={`navItem ${currentSelection==="Resume" ? 'selected' : 'notselected'}`}>
                 <span>Resume</span>
               </li>
             </ul>
