@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/Portfolio-React/static/css/main.e8b7355d.chunk.css",
+    "main.js": "/Portfolio-React/static/js/main.6d20e59a.chunk.js",
+    "main.js.map": "/Portfolio-React/static/js/main.6d20e59a.chunk.js.map",
+    "runtime-main.js": "/Portfolio-React/static/js/runtime-main.abe5a2f8.js",
+    "runtime-main.js.map": "/Portfolio-React/static/js/runtime-main.abe5a2f8.js.map",
+    "static/css/2.2b11587f.chunk.css": "/Portfolio-React/static/css/2.2b11587f.chunk.css",
+    "static/js/2.5866a35b.chunk.js": "/Portfolio-React/static/js/2.5866a35b.chunk.js",
+    "static/js/2.5866a35b.chunk.js.map": "/Portfolio-React/static/js/2.5866a35b.chunk.js.map",
+    "static/js/3.22bd239b.chunk.js": "/Portfolio-React/static/js/3.22bd239b.chunk.js",
+    "static/js/3.22bd239b.chunk.js.map": "/Portfolio-React/static/js/3.22bd239b.chunk.js.map",
+    "index.html": "/Portfolio-React/index.html",
+    "static/css/2.2b11587f.chunk.css.map": "/Portfolio-React/static/css/2.2b11587f.chunk.css.map",
+    "static/css/main.e8b7355d.chunk.css.map": "/Portfolio-React/static/css/main.e8b7355d.chunk.css.map",
+    "static/js/2.5866a35b.chunk.js.LICENSE.txt": "/Portfolio-React/static/js/2.5866a35b.chunk.js.LICENSE.txt",
+    "static/media/Bio.png": "/Portfolio-React/static/media/Bio.821dbb6b.png",
+    "static/media/Budgettracker.png": "/Portfolio-React/static/media/Budgettracker.24c1139c.png",
+    "static/media/GetawayfromGTA.png": "/Portfolio-React/static/media/GetawayfromGTA.b9f863f9.png",
+    "static/media/Health-buddy.png": "/Portfolio-React/static/media/Health-buddy.5690d7e1.png",
+    "static/media/Notetaker.png": "/Portfolio-React/static/media/Notetaker.f9d0999f.png",
+    "static/media/Weatherapp.png": "/Portfolio-React/static/media/Weatherapp.b52b2b4c.png",
+    "static/media/bootstrap-icons.css": "/Portfolio-React/static/media/bootstrap-icons.ea98e12d.woff2",
+    "static/media/font-awesome.min.css": "/Portfolio-React/static/media/fontawesome-webfont.f691f37e.woff",
+    "static/media/me.67b92d5c.jpg": "/Portfolio-React/static/media/me.67b92d5c.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.abe5a2f8.js",
+    "static/css/2.2b11587f.chunk.css",
+    "static/js/2.5866a35b.chunk.js",
+    "static/css/main.e8b7355d.chunk.css",
+    "static/js/main.6d20e59a.chunk.js"
+  ]
+}
