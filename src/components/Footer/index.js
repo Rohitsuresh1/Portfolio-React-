@@ -12,7 +12,7 @@ function Footer() {
 						target="_blank"
 						rel="noreferrer"
 						href="https://github.com/rohitsuresh1"
-						class="social-icon"
+						className="social-icon"
 					>
                         <FaGithub size={42} color={'black'}/>
 					</a>
@@ -22,7 +22,7 @@ function Footer() {
 						target="_blank"
 						rel="noreferrer"
 						href="https://linkedin.com/in/rohith-suresh/"
-						class="social-icon"
+						className="social-icon"
 					>
                        <FaLinkedinIn size={42} color={'black'}/>
 					</a>
@@ -32,7 +32,7 @@ function Footer() {
 						target="_blank"
 						rel="noreferrer"
 						href="https://twitter.com/"
-						class="social-icon"
+						className="social-icon"
 					>
                         <FaTwitter size={42} color={'black'}/>
 					</a>		

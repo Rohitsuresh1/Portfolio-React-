@@ -1,8 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { ImgOverlay } from 'image-overlay-react';
 import 'image-overlay-react/dist/index.css';
-import { FaLink, FaGithub } from "react-icons/fa";
+import Project from '../Project';
 
 function Portfolio() {
   const apps = [
@@ -55,24 +54,16 @@ function Portfolio() {
       <h1 style={{fontWeight:'bold', marginLeft:'50px'}} >My Recent Projects</h1>
       <div className="container con1" style={{display:'inline'}}>
 
-        {apps.map((app) => {
-          return (
-
-              <div  className='appImage' style={{display:'inline'}}>
-                  <ImgOverlay imgSrc={app.image.default} alt={app.alt} style={{height:'250px', width:'300px'}}
-                    bgColor='#AED9E9'
-                    position='right'
-                    width='300px'
-                    height='200px'
-                    fSize='48px'
-                    fColor='gray'
-                  >
-                      <div> <p>{app.name}</p>
-                      <a style={{ textDecoration: 'none'}} href={app.github}> <FaGithub size={28} color={'black'}/>{'    '}</a>
-                      <a style={{ textDecoration: 'none'}} href={app.deployed}> <FaLink size={28} color={'black'}/> </a>
-                      </div>
-                  </ImgOverlay>
-                </div>
+        {apps.map((app,id) => {
+          return(
+            <Project
+              key={id}
+              name={app.name}
+              github={app.github}
+              deployed={app.deployed}
+              image={app.image}
+              alt={app.alt}
+            />
           );
         })}
 
