@@ -21,7 +21,7 @@ A Single page application(SPA) of my personal portfolio which uses react to dyna
 The application can be cloned into your machine using `git pull` command and can be run locally using `npm start` command.
 
 ## Deployed Application
-Deployed application can be accessed [here]()
+Deployed application can be accessed [here](https://ancient-island-60144.herokuapp.com/)
 
 <a name="usage"></a>
 ## Usage
