@@ -121,10 +121,6 @@ button[disabled] {
   opacity: 0.8;
 }
 
-img {
-  max-width: 100%;
-}
-
 span[role='img'] {
   cursor: default;
 }
@@ -355,6 +351,20 @@ a {
   text-align: right;
   padding-left: 45px;
   font-size: large;
+}
+
+.con1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.appImage {
+  float: left;
+  display: inline;
+  padding: 15px;
+  background-color:#9fd2e4 ;
+  margin: 50px;
 }
 
 
