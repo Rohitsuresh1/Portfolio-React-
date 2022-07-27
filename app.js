@@ -4,7 +4,7 @@ const express = require('express');
 const cors = require('cors');
 const twilio = require('twilio'); 
 require ('dotenv').config();
-
+const path= require('path');
 
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
@@ -15,8 +15,11 @@ const client = new twilio(accountSid, authToken);
 const app = express(); 
 app.use(cors()); 
 
+const port=process.env.PORT||4000;
+
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '../build')));
+    app.use(express.static('build'));
+    console.log(process.env.NODE_ENV);
   }
 
 app.get('/api/send-sms', (req, res) => {
@@ -29,5 +32,10 @@ app.get('/api/send-sms', (req, res) => {
         from: '+13253997261'
     });
 })
-app.listen(4000, () => console.log("Running on Port 4000"));
+
+app.listen(port,(err)=>{
+    if(err) console.log(err);
+    console.log(`Running on Port ${port}`);
+})
+
 
