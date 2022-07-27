@@ -15,6 +15,9 @@ const client = new twilio(accountSid, authToken);
 const app = express(); 
 app.use(cors()); 
 
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '../build')));
+  }
 
 app.get('/api/send-sms', (req, res) => {
     res.send('Hello to the Twilio Server');
