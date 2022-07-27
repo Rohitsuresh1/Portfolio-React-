@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import { validateEmail } from '../../utils/helpers';
 
 function ContactForm() {
@@ -8,10 +7,21 @@ function ContactForm() {
   const [errorMessage, setErrorMessage] = useState('');
   const { name, email, message } = formState;
 
+  function sendText(message) {
+    fetch(`http://localhost:4000/api/send-sms/?number=%2B16479398874&msg=${message}`)
+            .then(res => res.json())
+            .then(
+                (data) => {
+                    console.log(data);
+                })
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!errorMessage) {
       console.log('Submit Form', formState);
+      let message = `You got a message from ${formState.name}. The message is "${formState.message}". You can contact them back at ${formState.email}`;
+      sendText(message);
     }
   };
 
