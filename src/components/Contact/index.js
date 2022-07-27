@@ -8,7 +8,15 @@ function ContactForm() {
   const { name, email, message } = formState;
 
   function sendText(message) {
-    fetch(`http://localhost:4000/api/send-sms/?number=%2B16479398874&msg=${message}`)
+    console.log(process.env.NODE_ENV);
+    let url ='';
+    if (process.env.NODE_ENV==='development'){
+      url=`http://localhost:4000/api/send-sms/?number=%2B16479398874&msg=${message}`;
+    } else if (process.env.NODE_ENV==='production') {
+      url=`https://ancient-island-60144.herokuapp.com/api/send-sms/?number=%2B16479398874&msg=${message}`;
+    }
+    console.log(url);
+    fetch(url)
             .then(res => res.json())
             .then(
                 (data) => {
