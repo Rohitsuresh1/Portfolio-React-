@@ -6,11 +6,11 @@ import Project from '../Project';
 function Portfolio() {
   const apps = [
     {
-      name: 'Health Buddy',
-      github: 'https://github.com/healthree/health-buddy',
+      name: 'ClubQ',
+      github: 'https://github.com/Project3-Team2/ClubQ',
       deployed: 'https://health-buddy-group3.herokuapp.com/',
-      image: require('../../assets/Images/Health-buddy.png'),
-      alt: 'Screen shot of Health Buddy App',
+      image: require('../../assets/Images/ClubQ.png'),
+      alt: 'Screen shot of ClubQ App',
     },
     {
       name: 'Getaway From GTA',
@@ -34,11 +34,11 @@ function Portfolio() {
       alt: 'Screen shot of Note Taker App',
     },
     {
-      name: 'Bio',
-      github: 'https://github.com/Rohitsuresh1/Bio',
-      deployed: 'https://rohitsuresh1.github.io/Bio/',
-      image: require('../../assets/Images/Bio.png'),
-      alt: 'Screen shot of Bio',
+      name: 'Health Buddy',
+      github: 'https://github.com/healthree/health-buddy',
+      deployed: 'https://health-buddy-group3.herokuapp.com/',
+      image: require('../../assets/Images/Health-buddy.png'),
+      alt: 'Screen shot of Health Buddy App',
     },
     {
       name: 'Weather Dashboard',
