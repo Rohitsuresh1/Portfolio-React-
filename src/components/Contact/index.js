@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
+// import {sendText,sendMail} from '../../utils/emailtext';
 
 function ContactForm() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
@@ -7,29 +8,12 @@ function ContactForm() {
   const [errorMessage, setErrorMessage] = useState('');
   const { name, email, message } = formState;
 
-  function sendText(message) {
-    console.log(process.env.NODE_ENV);
-    let url ='';
-    // if (process.env.NODE_ENV==='development'){
-    //   url=`http://localhost:4000/api/send-sms/?number=%2B16479398874&msg=${message}`;
-    // } else if (process.env.NODE_ENV==='production') {
-      url=`https://ancient-island-60144.herokuapp.com/api/send-sms/?number=%2B16479398874&msg=${message}`;
-    // }
-    console.log(url);
-    fetch(url)
-            .then(res => res.json())
-            .then(
-                (data) => {
-                    console.log(data);
-                })
-  }
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!errorMessage) {
       console.log('Submit Form', formState);
       let message = `You got a message from ${formState.name}. The message is "${formState.message}". You can contact them back at ${formState.email}`;
-      sendText(message);
+      // sendText();sendMail();
     }
   };
 

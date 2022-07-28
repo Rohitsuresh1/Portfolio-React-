@@ -8,7 +8,7 @@ function Portfolio() {
     {
       name: 'ClubQ',
       github: 'https://github.com/Project3-Team2/ClubQ',
-      deployed: 'https://health-buddy-group3.herokuapp.com/',
+      deployed: 'https://pacific-beyond-43744.herokuapp.com/',
       image: require('../../assets/Images/ClubQ.png'),
       alt: 'Screen shot of ClubQ App',
     },
